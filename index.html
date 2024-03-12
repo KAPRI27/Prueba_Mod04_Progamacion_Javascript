@@ -14,17 +14,18 @@
   <body>
     <div class="row">
       <div
-        class="col-12 card col-sm-7 text-center p-4 bg-warning shadow-lg"
         id="Tabla"
+        class="col-12 card col-sm-7 text-center p-4 bg-warning shadow-lg"
       >
         <h3>Animales en investigación</h3>
         <hr class="my-0 bg-dark w-75 mx-auto" />
-
+        <!--EN ESTE DIV SE MOSTRARAN LAS IMAGENES DE LOS ANIMALES-->
         <div
           id="Animales"
           class="my-3 p-3 d-flex align-items-start justify-content-start flex-wrap bg-dark"
         ></div>
       </div>
+      <!--AQUI EMPIEZA EL FORMULARIO-->
       <div class="card col-12 col-sm-4 bg-warning text-dark offset-1 shadow-lg">
         <div class="card-body">
           <h5 class="card-title">Registrar animal en:</h5>
@@ -34,6 +35,7 @@
           <hr />
           <div class="card-text my-3">
             <div class="form-group">
+              <!--MENU DESPLEGABLE-->
               <label for="exampleInputPassword1">Nombre del animal:</label>
               <select class="form-control bg-dark text-white" id="animal">
                 <option disabled selected>Seleccione un animal</option>
@@ -58,18 +60,20 @@
                 <option value="Más de 10 años">Más de 10 años</option>
               </select>
             </div>
-
+            <!--SECCION FORMULARIO / COMENTARIOS-->
             <div class="form-group">
               <label for="exampleInputPassword1">Comentarios:</label>
               <textarea
+                id="comentarios"
                 rows="5"
                 class="form-control shadow-lg bg-dark text-white"
-                id="comentarios"
               ></textarea>
             </div>
 
             <div class="p-5 card bg-dark">
-              <div id="preview"></div>
+              <div id="preview">
+                ESTA ES LA PREVISUALIZACION ANTES DE DAR ENVIAR
+              </div>
             </div>
           </div>
 
@@ -78,8 +82,34 @@
       </div>
     </div>
 
-    <audio id="player" class="d-none"></audio>
+    <!--LINK DE AUDIO-->
+    <audio
+      id="playerLobo"
+      class="d-none"
+      src="assets/sonidos/Aullido.mp3"
+    ></audio>
+    <audio
+      id="playerAguila"
+      class="d-none"
+      src="assets/sonidos/Chillido.mp3"
+    ></audio>
+    <audio
+      id="playerOso"
+      class="d-none"
+      src="assets/sonidos/Grunido.mp3"
+    ></audio>
+    <audio
+      id="playerLeon"
+      class="d-none"
+      src="assets/sonidos/Rugido.mp3" controls
+    ></audio>
+    <audio
+      id="playerSerpiente"
+      class="d-none"
+      src="assets/sonidos/Siseo.mp3"
+    ></audio>
 
+    <!--MODAL PARA MOSTRAR EL DETALLE DE CADA ANIMAL -->
     <div class="modal fade" id="exampleModal">
       <div class="modal-dialog modal-dialog-centered w-25" role="document">
         <div class="modal-content bg-dark">
@@ -88,14 +118,16 @@
       </div>
     </div>
 
+    <!--SCRIPTS JQUERY Y BOOTSTRAP-->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
     ></script>
     <script
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
     <script
@@ -103,6 +135,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

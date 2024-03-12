@@ -1,31 +1,45 @@
-//A ELABORAR SEGUN DIAGRAMA
+// Definición de la clase Animal para representar objetos de animales.
 
-//NOMBRE CLASE "Animal"
 class Animal {
-  constructor(nombre, edad, img, comentario, sonido) {
-    this.nombre = nombre;
-    this.edad = edad;
-    this.img = img;
-    this.comemtario = comentario;
-    this.sonido = sonido;
+    // Constructor de la clase Animal.
+    constructor(nombre, edad, img, comentario, sonido) {
+      // Propiedades privadas utilizando let y métodos de acceso.
+      let Nombre = nombre;
+      this.getNombre = () => Nombre;
+
+      let Edad = edad;
+      this.getEdad = () => Edad;
+
+      let Img = img;
+      this.getImg = () => Img;
+
+      let Comentario = comentario;
+      this.getComentario = () => Comentario;
+
+      let Sonido = sonido;
+      this.getNombre = () => Sonido;
+    }
+    
+    // Método para obtener el nombre del animal.
+    get Nombre() {
+      return this.getNombre();
+    }
+    // Método para obtener la edad del animal.
+    get Edad() {
+      return this.getEdad();
+    }
+    // Método para obtener la imagen del animal.
+    get Img() {
+      return this.getImg();
+    }
+    // Método para enviar el coemntario del animal.
+    set Comentario(nuevo_Comentario) {
+      this._Comentario = nuevo_Comentario;
+    }
+    // Método para obtener el sonido del animal.
+    get Sonido() {
+      return this.getSonido();
+    }
   }
 
-  //METODOS
-  get nombre() {
-    return this._nombre;
-  }
-  get edad() {
-    return this._edad;
-  }
-  get img() {
-    return this._img;
-  }
-  get sonido() {
-    return this._sonido;
-  }
-  set comentario(nuevo_comentario) {
-    this._comentario = nuevo_comentario;
-  }
-}
-
-let Aguila = new Animal();
+  export default Animal; // Exporta la clase Animal para que pueda ser utilizada en otros módulos.
