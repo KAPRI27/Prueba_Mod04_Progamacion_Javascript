@@ -42,4 +42,6 @@ class Animal {
     }
   }
 
+  console.log(Animal.edad);
+
   export default Animal; // Exporta la clase Animal para que pueda ser utilizada en otros módulos.

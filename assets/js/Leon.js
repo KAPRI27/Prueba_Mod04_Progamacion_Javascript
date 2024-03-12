@@ -14,12 +14,4 @@ class Leon extends Animal {
     audioPlayer.src = `assets/sounds/${this.getSonido()}`; // Establece la ruta del archivo de sonido del león.
     audioPlayer.play(); // Reproduce el sonido del león.
   }
-  //MÉTODO
 }
-
-
-
- 
-
-// Otros animales
-//...

@@ -3,7 +3,7 @@ import Animal from "./Animales.js"; // Importa la clase Animal desde el archivo 
 const audioPlayer = document.getElementById("playerSiseo"); // Obtiene el elemento de audio del documento HTML
 
 
-// clase Leon
+// clase Serpiente
 class Serpiente extends Animal {
   constructor(nombre, edad, img, comentario, sonido) {
     super(nombre, edad, img, comentario, sonido);
