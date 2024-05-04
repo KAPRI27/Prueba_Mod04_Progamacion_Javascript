@@ -1,4 +1,4 @@
-import Animal from "./Animales.js"; // Importa la clase Animal desde el archivo Animal.js
+import Animal from "./Animal.js"; // Importa la clase Animal desde el archivo Animal.js
 
 const audioPlayer = document.getElementById("playerSiseo"); // Obtiene el elemento de audio del documento HTML
 
@@ -10,8 +10,8 @@ class Serpiente extends Animal {
   }
   //Sisear()
   Sisear() {
-    console.log(this.getSonido()); // Imprime el sonido del león en la consola.
-    audioPlayer.src = `assets/sounds/${this.getSonido()}`; // Establece la ruta del archivo de sonido del león.
-    audioPlayer.play(); // Reproduce el sonido del león.
+    console.log(this.getSonido()); // Imprime el sonido de la Serpiente en la consola.
+    audioPlayer.src = `assets/sounds/${this.getSonido()}`; // Establece la ruta del archivo de sonido de la Serpiente.
+    audioPlayer.play(); // Reproduce el sonido de la Serpiente.
   }
 }
